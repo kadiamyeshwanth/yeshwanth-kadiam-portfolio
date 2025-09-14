@@ -1487,6 +1487,232 @@
                 justify-content: center;
             }
         }
+        .skills-section {
+    background: var(--bg-primary);
+}
+
+.skills-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.technical-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-2xl);
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    margin: 0;
+    min-height: auto;
+}
+
+.skill-category {
+    background: var(--bg-primary);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--bg-tertiary);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 320px
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-2xl);
+    border-color: var(--primary-color);
+}
+
+.skill-category .category-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.skill-category .category-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.skill-category h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.skills-grid-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.skills-grid-items .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-fast);
+    text-align: center;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-grid-items .skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform var(--transition-fast);
+}
+
+.skills-grid-items .skill-item:hover {
+    background: var(--bg-primary);
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.skills-grid-items .skill-item:hover::before {
+    transform: scaleX(1);
+}
+
+.skill-logo {
+    width: 45px;
+    height: 45px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: white;
+    font-family: var(--font-family-mono);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-fast);
+}
+
+.skills-grid-items .skill-item:hover .skill-logo {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skills-grid-items .skill-item span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: color var(--transition-fast);
+}
+
+.skills-grid-items .skill-item:hover span {
+    color: var(--primary-color);
+}
+
+/* Special styling for different skill categories */
+.skill-category:nth-child(1) .category-icon {
+    background: linear-gradient(135deg, #6366f1, #6366f1);
+}
+
+.skill-category:nth-child(1) .skill-logo {
+    background: linear-gradient(135deg, #6366f1, #6366f1);
+}
+
+.skill-category:nth-child(2) .category-icon {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.skill-category:nth-child(2) .skill-logo {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.skill-category:nth-child(3) .category-icon {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.skill-category:nth-child(3) .skill-logo {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.skill-category:nth-child(4) .category-icon {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.skill-category:nth-child(4) .skill-logo {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .technical-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .technical-skills-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .skills-grid-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .skill-logo {
+        width: 40px;
+        height: 40px;
+        font-size: 0.75rem;
+    }
+    
+    .skills-grid-items .skill-item span {
+        font-size: 0.85rem;
+    }
+    
+    .skills-grid-items .skill-item {
+        padding: var(--spacing-3xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-category .category-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .skill-category h3 {
+        font-size: 1.1rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -1636,6 +1862,11 @@
                                 <p class="institution">Indian Institute of Information Technology, Sri City</p>
                                 <span class="duration">2023 - 2027</span>
                             </div>
+                            <div class="education-item" style="margin-top: var(--spacing-lg);">
+                                <h4>Higher Secondary Education (MPC)</h4>
+                                <p class="institution">Narayana College</p>
+                                <span class="duration">2021 - 2023</span>
+</div>
                         </div>
                     </div>
                     
@@ -1688,98 +1919,141 @@
 
     <section id="skills" class="section skills-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <h2 class="section-title">Skills & Expertise</h2>
                 <p class="section-subtitle">Technologies and skills I work with</p>
             </div>
             
             <div class="skills-content">
-                <div class="skills-grid">
-                    <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                <div class="technical-skills-grid">
+                    <div class="skill-category">
                         <div class="category-header">
                             <div class="category-icon">
-                                <i class="fas fa-code"></i>
+                                <i class="fas fa-terminal"></i>
                             </div>
-                            <h3>Technical Skills</h3>
+                            <h3>Languages & Core</h3>
                         </div>
-                        <div class="skills-list">
+                        <div class="skills-grid-items">
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <div class="skill-icon">
-                                        <i class="fas fa-laptop-code"></i>
-                                    </div>
-                                    <div class="skill-details">
-                                        <h4>Programming Languages</h4>
-                                        <p>Proficient in multiple programming languages</p>
-                                    </div>
-                                </div>
+                                <div class="skill-logo">JS</div>
+                                <span>JavaScript</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <div class="skill-icon">
-                                        <i class="fas fa-sitemap"></i>
-                                    </div>
-                                    <div class="skill-details">
-                                        <h4>Data Structures & Algorithms</h4>
-                                        <p>Strong foundation in DSA concepts</p>
-                                    </div>
-                                </div>
+                                <div class="skill-logo">TS</div>
+                                <span>TypeScript</span>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-logo">C++</div>
+                                <span>C++</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <div class="skill-icon">
-                                        <i class="fas fa-cogs"></i>
-                                    </div>
-                                    <div class="skill-details">
-                                        <h4>Software Development</h4>
-                                        <p>Full-stack web development experience</p>
-                                    </div>
-                                </div>
+                                <div class="skill-logo"><i class="fab fa-java"></i></div>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">SQL</div>
+                                <span>SQL</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="skill-category">
                         <div class="category-header">
                             <div class="category-icon">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-globe"></i>
                             </div>
-                            <h3>Soft Skills</h3>
+                            <h3>Frontend</h3>
                         </div>
-                        <div class="skills-list">
+                        <div class="skills-grid-items">
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <div class="skill-icon">
-                                        <i class="fas fa-comments"></i>
-                                    </div>
-                                    <div class="skill-details">
-                                        <h4>Communication</h4>
-                                        <p>Clear and effective communication skills</p>
-                                    </div>
-                                </div>
+                                <div class="skill-logo"><i class="fab fa-react"></i></div>
+                                <span>React</span>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fas fa-wind"></i></div>
+                                <span>TailwindCSS</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <div class="skill-icon">
-                                        <i class="fas fa-handshake"></i>
-                                    </div>
-                                    <div class="skill-details">
-                                        <h4>Teamwork</h4>
-                                        <p>Collaborative approach to problem-solving</p>
-                                    </div>
-                                </div>
+                                <div class="skill-logo"><i class="fab fa-html5"></i></div>
+                                <span>HTML5</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <div class="skill-icon">
-                                        <i class="fas fa-lightbulb"></i>
-                                    </div>
-                                    <div class="skill-details">
-                                        <h4>Problem Solving</h4>
-                                        <p>Analytical thinking and creative solutions</p>
-                                    </div>
-                                </div>
+                                <div class="skill-logo"><i class="fab fa-css3-alt"></i></div>
+                                <span>CSS3</span>
                             </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">EJS</div>
+                                <span>EJS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Backend & Database</h3>
+                        </div>
+                        <div class="skills-grid-items">
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fab fa-node-js"></i></div>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">EX</div>
+                                <span>Express.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fas fa-leaf"></i></div>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fas fa-elephant"></i></div>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">My</div>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fas fa-compass"></i></div>
+                                <span>MongoDB Compass</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Dev Tools & Platforms</h3>
+                        </div>
+                        <div class="skills-grid-items">
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fab fa-git-alt"></i></div>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fab fa-github"></i></div>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fas fa-paper-plane"></i></div>
+                                <span>Postman</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo"><i class="fas fa-code"></i></div>
+                                <span>VS Code</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-logo">NPM</div>
+                                <span>NPM</span>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
