@@ -370,13 +370,6 @@ body {
   border-radius: 2px;
   background: rgba(102,204,255,0.04);
 }
-.intern-live-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  animation: pulse-status 2s infinite;
-}
-
 .hero-scroll-hint {
   display: flex;
   flex-direction: column;
@@ -1000,7 +993,7 @@ body {
   color: var(--gray-mid);
 }
 
-/* Currently block */
+/* Experience and focus block */
 .currently-block {
   margin-top: 5rem;
   padding-top: 3rem;
@@ -1550,7 +1543,7 @@ footer {
   transition: color 0.2s, transform 0.25s;
 }
 
-/* Currently block — items appear staggered on hover */
+/* Experience and focus items appear staggered on hover */
 .currently-list .c-item {
   border: 1px solid rgba(255,255,255,0.03);
 }
