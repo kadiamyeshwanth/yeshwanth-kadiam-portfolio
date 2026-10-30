@@ -769,6 +769,74 @@ body {
   position: relative;
   z-index: 1;
 }
+.build-project-front {
+  background:
+    radial-gradient(circle at 78% 34%, rgba(0, 212, 255, 0.14), transparent 32%),
+    var(--dark-2);
+}
+.project-preview--build {
+  top: 4rem;
+  right: 1.75rem;
+  width: 63%;
+  border-color: rgba(0, 212, 255, 0.42);
+}
+.uav-project-front {
+  background:
+    radial-gradient(circle at 78% 35%, rgba(16, 185, 129, 0.16), transparent 32%),
+    var(--dark-2);
+}
+.project-screens {
+  position: absolute;
+  top: 4rem;
+  right: 1.75rem;
+  width: 63%;
+  height: 52%;
+}
+.project-screen {
+  position: absolute;
+  display: block;
+  width: 73%;
+  height: auto;
+  border: 1px solid rgba(102, 204, 255, 0.42);
+  border-radius: 4px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  object-fit: cover;
+  background: var(--dark);
+}
+.project-screen--map {
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.project-screen--flight {
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-color: rgba(16, 185, 129, 0.52);
+}
+.shadow-project-front {
+  background:
+    radial-gradient(circle at 78% 35%, rgba(139, 92, 246, 0.18), transparent 32%),
+    var(--dark-2);
+}
+.project-preview--shadow {
+  top: 4rem;
+  right: 1.75rem;
+  width: 63%;
+  border-color: rgba(236, 72, 153, 0.45);
+}
+.build-project-front .flip-front-num,
+.build-project-front .flip-front-hover-hint,
+.build-project-front > div:last-child,
+.uav-project-front .flip-front-num,
+.uav-project-front .flip-front-hover-hint,
+.uav-project-front > div:last-child,
+.shadow-project-front .flip-front-num,
+.shadow-project-front .flip-front-hover-hint,
+.shadow-project-front > div:last-child {
+  position: relative;
+  z-index: 3;
+}
 .aura-project-front {
   background:
     radial-gradient(circle at 78% 35%, rgba(0, 212, 255, 0.14), transparent 28%),
