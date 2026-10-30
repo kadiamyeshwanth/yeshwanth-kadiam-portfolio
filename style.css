@@ -747,6 +747,28 @@ body {
   opacity: 0.94;
   filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.28));
 }
+.project-preview {
+  position: absolute;
+  top: 4.5rem;
+  right: 2rem;
+  width: 57%;
+  height: auto;
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  border-radius: 5px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+.finance-project-front {
+  background:
+    radial-gradient(circle at 78% 35%, rgba(249, 115, 22, 0.16), transparent 32%),
+    var(--dark-2);
+}
+.finance-project-front .flip-front-num,
+.finance-project-front .flip-front-hover-hint,
+.finance-project-front > div:last-child {
+  position: relative;
+  z-index: 1;
+}
 .aura-project-front {
   background:
     radial-gradient(circle at 78% 35%, rgba(0, 212, 255, 0.14), transparent 28%),
@@ -836,6 +858,12 @@ body {
   margin-left: 1rem;
 }
 .flip-back-link:hover { color: var(--accent); }
+.flip-back-links {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.flip-back-links .flip-back-link { margin-left: 0.8rem; }
 
 /* =====================================================
    SKILLS — DARK SECTION (full-width columns)
