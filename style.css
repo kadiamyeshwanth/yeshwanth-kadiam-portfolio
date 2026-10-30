@@ -744,6 +744,21 @@ body {
   color: var(--gray-dim);
   font-family: var(--font-mono);
 }
+.project-mark {
+  position: absolute;
+  top: 4.5rem;
+  right: 2.5rem;
+  width: clamp(74px, 10vw, 112px);
+  height: auto;
+  object-fit: contain;
+  opacity: 0.94;
+  filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.28));
+}
+.aura-project-front {
+  background:
+    radial-gradient(circle at 78% 35%, rgba(0, 212, 255, 0.14), transparent 28%),
+    var(--dark-2);
+}
 
 .flip-back {
   background: var(--dark-card);
